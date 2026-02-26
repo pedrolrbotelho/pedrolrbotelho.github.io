@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://pedrobotelho.github.io/ -->
-<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_mrStDV"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Pedro Botelho_files/gtm.js"></script><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
+<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_mrStDV"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Pedro Botelho_files/gtm.js"></script>
   
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -316,7 +316,15 @@
 .MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
 .MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
 .MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
+</style><script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head>
   <body style="background-color: #1f1f1f; color: #ffffff;" data-new-gr-c-s-check-loaded="14.1275.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND63487"
@@ -393,7 +401,7 @@ Visual Range Air Combat</li>
 <ul class="posts">
   <li>
     <h1 id="posts-label" style="color:#c9c9c9">Selected Publications</h1>
-  </li><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
+  </li>
 <div class="w3-padding-small">
     <div class="w3-row hover-shadow pub-box" id="about">
       <div class="pubcol-left  w3-hide-small">
@@ -419,7 +427,7 @@ Visual Range Air Combat</li>
         </div>
       </div>
     </div>
-  </div><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
+  </div>
 <div class="w3-padding-small">
     <div class="w3-row hover-shadow pub-box" id="about">
       <div class="pubcol-left  w3-hide-small">
@@ -458,7 +466,7 @@ Visual Range Air Combat</li>
         </div>
       </div>
     </div>
-  </div><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
+  </div>
 <div class="w3-padding-small">
     <div class="w3-row hover-shadow pub-box" id="about">
       <div class="pubcol-left  w3-hide-small">
@@ -521,7 +529,7 @@ Visual Range Air Combat</li>
 <ul class="posts">
   <li>
     <h1 id="posts-label" style="color:#c9c9c9">Side Projects</h1>
-  </li><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
+  </li>
 <div class="w3-padding-small">
     <div class="w3-row hover-shadow pub-box" id="about">
       <div class="pubcol-left  w3-hide-small">
@@ -539,24 +547,42 @@ Visual Range Air Combat</li>
         </div>
       </div>
     </div>
-  </div><script src="./Pedro Botelho_files/MathJax.js" id=""></script>
-<!--div class="w3-padding-small">
-    <div class="w3-row hover-shadow pub-box" id="about">
-      <div class="pubcol-left  w3-hide-small">
-        <img src="./Pedro Botelho_files/photo.png" style="width: 100%; height: auto; display: block; aspect-ratio: 16/9; background: #ffffff; object-fit: contain; padding: 0;" class="w3-round w3-image pub-image" alt="Table Setting">
-      </div>
-      
-      <div class="pubcol-right" style="color:#000000">
-        <h5 class="pubtitle">SIDE PROJECT 2</h5>
+  </div>
 
-        <div class="w3-row"><h5 class="no-block">Personal Side Project</h5><a class="link-bracket" href="https://github.com/REPO"> [code]</a>
-          <h5>DESCRIPTION. </h5>
-        </div>
-      </div>
+  <style>
+    .photo-gallery {
+      display: grid;
+      /* Cria colunas que se ajustam automaticamente ao tamanho da tela */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px; /* Espaço entre as fotos */
+      margin-top: 20px;
+    }
+    
+    .photo-gallery img {
+      width: 100%;
+      height: 300px; /* Altura fixa para deixar a grade alinhada */
+      object-fit: cover; /* Garante que a foto preencha o espaço sem amassar/distorcer */
+      border-radius: 4px; /* Cantos levemente arredondados, combinando com seus cards */
+      transition: transform 0.3s ease; /* Prepara o efeito de animação */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra leve para destacar no fundo escuro */
+    }
+
+    .photo-gallery img:hover {
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+      cursor: pointer;
+    }
+  </style>
+
+  <div style="margin-top: 40px;">
+    <h2 style="font-size: 1.2rem; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #444; padding-bottom: 10px; margin-bottom: 20px">
+      Gallery
+    </h2>
+    
+    <div class="photo-gallery">
+      <img src="./Pedro Botelho_files/WiOptAward.jpeg" alt="Best Student Paper Award - WiOpt 2025" style="object-fit: cover;">
+      <img src="./Pedro Botelho_files/WiOptBestStudentPaperAward.jpg" alt="Best Student Paper Award - WiOpt 2025" style="object-fit: cover;">
     </div>
-  </div--></ul>
-
-
+  </div>
 
       </section>
     </main>
