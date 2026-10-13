@@ -1,0 +1,185 @@
+/* site.css — additions shared by index.html and journey.html.
+   Loaded after style.css and w3.css. */
+
+/* ---- Sidebar navigation ---- */
+.navigation ul a { color: #ffffff; }
+.navigation ul a:hover { color: #0088ff; }
+.navigation ul a.current { color: #ff6f00; }
+
+/* Class twin of #posts-label so new sections don't repeat the id */
+.posts-label {
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+  color: #c9c9c9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+/* ---- Publication cards without a figure: venue tile in place of the thumbnail ---- */
+.pub-tile {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #eef1f5;
+  border-radius: 4px;
+  font-family: "Barlow", sans-serif;
+  color: #1f2a3a;
+}
+.pub-tile .tile-venue { font-size: 1.1rem; font-weight: 600; line-height: 1.2; padding: 0 8px; }
+.pub-tile .tile-year  { font-size: 0.9rem; color: #5b6778; margin-top: 2px; }
+.pub-status {
+  font-family: "Barlow", sans-serif;
+  font-size: medium;
+  font-style: italic;
+  color: #555;
+}
+
+/* ---- Awards & honors ---- */
+.awards { list-style: none; padding: 0; margin: 0; }
+.awards li {
+  display: grid;
+  grid-template-columns: 6em 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #333;
+}
+.awards li:last-child { border-bottom: 0; }
+.awards .year { font-family: "Barlow", sans-serif; font-weight: 600; color: #c9c9c9; }
+.awards .trophy { width: 15px; height: 15px; vertical-align: -2px; }
+
+/* ---- Gallery captions (index.html) ---- */
+.photo-gallery figure { margin: 0; }
+.photo-gallery a { display: block; }
+.photo-gallery figcaption {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #aaa;
+  margin-top: 7px;
+}
+
+/* ---- Journey page ---- */
+.journey-intro {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  line-height: 1.9em;
+  color: #fff;
+  max-width: 68ch;
+  margin: 0;
+}
+
+.timeline { list-style: none; padding: 0; margin: 40px 0 0; position: relative; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 11.5em;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: #444;
+}
+
+.chapter {
+  display: grid;
+  grid-template-columns: 10em 1fr;
+  column-gap: 3em;
+  padding: 0 0 56px;
+  position: relative;
+}
+.chapter::before {
+  content: "";
+  position: absolute;
+  left: calc(11.5em - 5.5px);
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  border: 2px solid #c9c9c9;
+}
+.chapter.now::before { background: #ff6f00; border-color: #ff6f00; }
+.timeline > li:last-child { padding-bottom: 8px; }
+
+.chapter .when {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #c9c9c9;
+  text-align: right;
+  padding-top: 5px;
+}
+.chapter .when .where {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 3px;
+}
+
+.chapter h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.chapter h2 .sub { display: block; font-weight: 400; font-size: 1rem; color: #c9c9c9; margin-top: 4px; }
+.chapter p {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  line-height: 1.9em;
+  color: #fff;
+  margin: 0 0 14px;
+  max-width: 68ch;
+}
+.chapter a { color: #0088ff; text-decoration: none; }
+.chapter a:hover { border-bottom: 0.5px solid #0088ff; }
+.chapter .trophy { width: 15px; height: 15px; vertical-align: -2px; }
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 20px 0 0;
+  max-width: 760px;
+}
+.photos.two { grid-template-columns: 1fr 1fr; }
+.photos figure { margin: 0; }
+.photos a { display: block; }
+.photos img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+.photos.two img { aspect-ratio: 4 / 3; }
+.photos.two.square img { aspect-ratio: 1 / 1; }
+.photos.two.tall img { aspect-ratio: auto; }
+.photos .face-up img { object-position: center 30%; }
+.photos figure.doc img { background: #fff; box-shadow: none; border: 1px solid #444; }
+.photos figcaption {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #aaa;
+  margin-top: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before { left: 5px; }
+  .chapter { grid-template-columns: 1fr; row-gap: 6px; padding-left: 24px; }
+  .chapter::before { left: 0; }
+  .chapter .when { text-align: left; padding-top: 0; }
+  .photos.two { grid-template-columns: 1fr; }
+  .photos.two img, .photos.two.square img { aspect-ratio: auto; }
+  .awards li { grid-template-columns: 1fr; gap: 2px; }
+}
