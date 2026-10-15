@@ -186,3 +186,13 @@
   .photos.two img, .photos.two.square img { aspect-ratio: auto; }
   .awards li { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* ---- Publication cards on phones: show the figure above the text ---- */
+@media screen and (max-width: 600px) {
+  .pub-box { flex-direction: column; align-items: stretch; }
+  .pub-box .pubcol-left { display: block !important; width: 100%; margin: 0; }
+  .pub-box .pubcol-left img { width: auto !important; max-width: 100%; max-height: 200px; margin: 6px auto 10px; }
+  .pubcol-left:has(.pub-tile) { display: flex !important; }
+  .pub-tile { min-height: 90px; }
+  .pubcol-right { width: 100%; }
+}
