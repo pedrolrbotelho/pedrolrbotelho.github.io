@@ -327,7 +327,7 @@ main {
 main .about {
     display: flex;
     height: 100vh;
-    padding-bottom: 25vh;
+    padding-bottom: 40vh;
     min-width: 287px;
     justify-content: center;
     flex-direction: column;
